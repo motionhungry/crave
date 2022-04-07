@@ -3,8 +3,8 @@ Crave
 
 A project starter CLI
 
-[![Version](https://img.shields.io/npm/v/@motionhungry/crave.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/@motionhungry/crave.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![Version](https://img.shields.io/npm/v/@motionhungry/crave.svg)](https://npmjs.org/package/@motionhungry/crave)
+[![License](https://img.shields.io/npm/l/@motionhungry/crave.svg)](https://github.com/motionhungry/crave/blob/master/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -17,7 +17,7 @@ $ npm install -g @motionhungry/crave
 $ crave COMMAND
 running command...
 $ crave (--version)
-@motionhungry/crave/0.0.0 darwin-arm64 node-v17.5.0
+@motionhungry/crave/0.1.0 darwin-arm64 node-v17.5.0
 $ crave --help [COMMAND]
 USAGE
   $ crave COMMAND
@@ -71,5 +71,5 @@ EXAMPLES
   $ crave start rn-design-system my-project
 ```
 
-_See code: [dist/commands/start.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.0.0/dist/commands/start.ts)_
+_See code: [dist/commands/start.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.1.0/dist/commands/start.ts)_
 <!-- commandsstop -->

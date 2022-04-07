@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "A project starter CLI",
   "author": "Kyle Getrost <kyle@motionhungry.com>",
+  "private": false,
   "bin": {
     "crave": "./bin/run"
   },
-  "homepage": "https://github.com/https://github.com/motionhungry/crave.git/crave",
-  "license": "MPL 2.0",
+  "homepage": "https://github.com/motionhungry/crave.git/crave",
+  "license": "MIT",
   "main": "dist/index.js",
   "repository": "https://github.com/motionhungry/crave.git/crave",
   "files": [
