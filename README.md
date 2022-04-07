@@ -17,7 +17,7 @@ $ npm install -g @motionhungry/crave
 $ crave COMMAND
 running command...
 $ crave (--version)
-@motionhungry/crave/0.1.0 darwin-arm64 node-v17.5.0
+@motionhungry/crave/0.1.1 darwin-arm64 node-v17.5.0
 $ crave --help [COMMAND]
 USAGE
   $ crave COMMAND
@@ -71,5 +71,5 @@ EXAMPLES
   $ crave start rn-design-system my-project
 ```
 
-_See code: [dist/commands/start.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.1.0/dist/commands/start.ts)_
+_See code: [dist/commands/start.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.1.1/dist/commands/start.ts)_
 <!-- commandsstop -->
