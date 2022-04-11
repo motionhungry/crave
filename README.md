@@ -17,7 +17,7 @@ $ npm install -g @motionhungry/crave
 $ crave COMMAND
 running command...
 $ crave (--version)
-@motionhungry/crave/0.1.1 darwin-arm64 node-v17.5.0
+@motionhungry/crave/0.2.0 darwin-arm64 node-v17.5.0
 $ crave --help [COMMAND]
 USAGE
   $ crave COMMAND
@@ -27,6 +27,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`crave help [COMMAND]`](#crave-help-command)
+* [`crave list [FILE]`](#crave-list-file)
 * [`crave start TEMPLATE NAME`](#crave-start-template-name)
 
 ## `crave help [COMMAND]`
@@ -49,20 +50,34 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.10/src/commands/help.ts)_
 
+## `crave list [FILE]`
+
+List the available templates.
+
+```
+USAGE
+  $ crave list [FILE]
+
+DESCRIPTION
+  List the available templates.
+
+EXAMPLES
+  $ crave list
+```
+
+_See code: [dist/commands/list.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.2.0/dist/commands/list.ts)_
+
 ## `crave start TEMPLATE NAME`
 
 Create a new project.
 
 ```
 USAGE
-  $ crave start [TEMPLATE] [NAME] [-b <value>]
+  $ crave start [TEMPLATE] [NAME]
 
 ARGUMENTS
   TEMPLATE  The starter template to use.
   NAME      The name of the project.
-
-FLAGS
-  -b, --branch=<value>  An optional branch name
 
 DESCRIPTION
   Create a new project.
@@ -71,5 +86,5 @@ EXAMPLES
   $ crave start rn-design-system my-project
 ```
 
-_See code: [dist/commands/start.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.1.1/dist/commands/start.ts)_
+_See code: [dist/commands/start.ts](https://github.com/motionhungry/crave.git/crave/blob/v0.2.0/dist/commands/start.ts)_
 <!-- commandsstop -->
