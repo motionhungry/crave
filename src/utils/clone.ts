@@ -12,14 +12,10 @@ export type FlagsArgs = {
   branch: string | undefined;
 };
 
-export const clone = async (args: CloneArgs): Promise<void> => {
+export const clone = (args: CloneArgs) => {
   const templatePath = getTemplatePath(args.template);
   fs.cpSync(templatePath, path.join(process.cwd(), args.name), {
     dereference: true,
     recursive: true,
-    filter: (filePath: string) => {
-      console.log(filePath);
-      return !filePath.includes("node_modules");
-    },
   });
 };
