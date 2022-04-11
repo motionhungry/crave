@@ -1,6 +1,7 @@
-import * as degit from "degit";
+import * as fs from "fs";
+import * as path from "path";
 
-import { GIT_REPO } from "../constants";
+import { getTemplatePath } from "./templates";
 
 export type CloneArgs = {
   template: string;
@@ -11,24 +12,14 @@ export type FlagsArgs = {
   branch: string | undefined;
 };
 
-export const clone = async (flags: FlagsArgs, args: CloneArgs): Promise<void> => {
-  const branch = flags.branch ? `#${flags.branch}` : "";
-  const emitter = degit(`${GIT_REPO}/${args.template}${branch}`, {
-    cache: true,
-    force: true,
-    verbose: true,
-  });
-
-  emitter.on("info", (info) => {
-    console.log(info.message);
-  });
-
-  return new Promise(async (resolve, reject) => {
-    try {
-      await emitter.clone(args.name);
-      resolve();
-    } catch (err) {
-      reject(err);
-    }
+export const clone = async (args: CloneArgs): Promise<void> => {
+  const templatePath = getTemplatePath(args.template);
+  fs.cpSync(templatePath, path.join(process.cwd(), args.name), {
+    dereference: true,
+    recursive: true,
+    filter: (filePath: string) => {
+      console.log(filePath);
+      return !filePath.includes("node_modules");
+    },
   });
 };

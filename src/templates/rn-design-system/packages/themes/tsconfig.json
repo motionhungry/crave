@@ -1,0 +1,8 @@
+{
+  "extends": "@rn-design-system/tsconfig/base.json",
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "baseUrl": "./src"
+  }
+}

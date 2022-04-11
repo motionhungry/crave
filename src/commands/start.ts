@@ -1,6 +1,7 @@
-import { Command, Flags } from "@oclif/core";
+import { Command } from "@oclif/core";
 
-import { clone, FlagsArgs, CloneArgs } from "../utils/clone";
+import { clone, CloneArgs } from "../utils/clone";
+import { rename } from "../utils/rename";
 
 export default class Start extends Command {
   static description = "Create a new project.";
@@ -18,20 +19,9 @@ export default class Start extends Command {
     { name: "name", required: true, description: "The name of the project." },
   ];
 
-  static flags = {
-    branch: Flags.string({
-      char: "b",
-      required: false,
-      description: "An optional branch name",
-    }),
-  };
-
   public async run(): Promise<void> {
-    const { args, flags } = await this.parse<FlagsArgs, CloneArgs>(Start);
-    try {
-      await clone(flags, args);
-    } catch (err) {
-      console.log(err);
-    }
+    const { args } = await this.parse<{}, CloneArgs>(Start);
+    await clone(args);
+    rename(args.template, args.name);
   }
 }

@@ -1,0 +1,15 @@
+{
+  "name": "@rn-design-system/hooks",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MPL 2.0",
+  "devDependencies": {
+    "@rn-design-system/config": "*",
+    "@rn-design-system/tsconfig": "*",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "@rn-design-system/themes": "*",
+    "styled-components": "^5.3.3"
+  }
+}
