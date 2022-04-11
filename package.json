@@ -1,6 +1,6 @@
 {
   "name": "@motionhungry/crave",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A project starter CLI",
   "author": "Kyle Getrost <kyle@motionhungry.com>",
   "private": false,
@@ -52,7 +52,7 @@
     "topics": {}
   },
   "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
+    "build": "shx rm -rf dist && tsc -b && cp -r src/templates dist",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
