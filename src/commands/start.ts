@@ -21,7 +21,7 @@ export default class Start extends Command {
 
   public async run(): Promise<void> {
     const { args } = await this.parse<{}, CloneArgs>(Start);
-    await clone(args);
+    clone(args);
     rename(args.template, args.name);
   }
 }
