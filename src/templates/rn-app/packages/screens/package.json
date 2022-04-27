@@ -1,0 +1,34 @@
+{
+  "name": "@rn-app/screens",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --loader '.js=jsx' --dts --external react",
+    "clean": "yarn run rimraf dist .turbo node_modules",
+    "dev": "tsup src/index.ts --format esm,cjs --loader '.js=jsx' --dts --watch --external react"
+  },
+  "devDependencies": {
+    "@motionhungry-ui/config": "^0.0.5",
+    "@motionhungry-ui/tsconfig": "^0.0.5",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.24",
+    "@types/styled-components-react-native": "^5.1.3",
+    "@types/styled-system": "^5.1.15",
+    "tsup": "^5.12.6",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "@motionhungry-ui/components": "^0.0.7",
+    "react": "17.0.1",
+    "react-native": "0.64.3",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5"
+  }
+}

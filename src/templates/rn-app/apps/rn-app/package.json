@@ -1,0 +1,37 @@
+{
+  "name": "@rn-app/mobile",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@rn-app/screens": "*",
+    "@motionhungry-ui/components": "^0.0.7",
+    "@motionhungry-ui/hooks": "^0.0.6",
+    "@motionhungry-ui/themes": "^0.0.7",
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "^6.6.2",
+    "expo": "~44.0.0",
+    "expo-status-bar": "~1.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-safe-area-context": "^4.2.5",
+    "react-native-screens": "^3.13.1",
+    "react-native-web": "0.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@motionhungry-ui/config": "^0.0.5",
+    "@motionhungry-ui/tsconfig": "^0.0.5",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "typescript": "~4.3.5"
+  },
+  "private": true
+}
